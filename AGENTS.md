@@ -51,4 +51,4 @@ One of the §3.6 authentication libraries (`libnss-*`, `libpam-*`, `libtacplus-m
 
 - The NSS module ordering matters — `libnss_mapuid` must be **first** and `libnss_mapname` **last** in `nsswitch.conf`. The README explains why; don't reverse them.
 - `passwd` field is forced to `'x'` so PAM auth on the base account is impossible — only the mapped accounts authenticate (typically via `pam_radius`).
-- License: GPL-2-or-later. Original copyright Cumulus Networks; VyOS additions (2020+) layered on top.
+- License: GPL-2-or-later. Original copyright Cumulus Networks; DozenOS additions (2020+) layered on top.
