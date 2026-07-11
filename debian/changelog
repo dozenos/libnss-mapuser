@@ -1,0 +1,45 @@
+dozenos-libnss-mapuser (1.1.0-cl3u3.1) RELEASED; urgency=medium
+
+  * Package rename for dependency management purposes.
+
+ -- Daniil Baturin <daniil@dozenos.local>  Wed, 09 Apr 2025 15:06:25 +0000
+
+libnss-mapuser (1.1.0-cl3u3) RELEASED; urgency=medium
+
+  * minor fixes 
+
+ -- dev-support <dev-support@cumulusnetworks.com>  Mon, 29 Oct 2018 13:34:42 -0700
+
+libnss-mapuser (1.1.0-cl3u2) RELEASED; urgency=low
+
+  * Changed postinst to not create unneeded home directories for
+    radius_user and radius_priv_user when running adduser at install
+
+ -- dev-support <dev-support@cumulusnetworks.com>  Wed, 18 Apr 2018 18:18:16 -0700
+
+libnss-mapuser (1.1.0-cl3u1) RELEASED; urgency=low
+
+  * Closes CM-19866 - Fixed exclude_users not skipped, and added
+    more system accounts to exclude_users: www-data,man, tacacs[0-9]*.
+  * New Enabled - When Vendor Specific Option containing shell:priv-lvl is
+    present, and the user is privileged (determined by libpam-radius-auth)
+    group membership is modified to add the radius accounts to the groups that
+    have radius_user and/or radius_priv_user, to give that that user account
+    more privileges, similar to tacplus client privilege 15.
+
+ -- dev-support <dev-support@cumulusnetworks.com>  Fri, 13 Apr 2018 16:19:08 -0700
+
+libnss-mapuser (1.0.0-cl3u2) RELEASED; urgency=low
+
+  * Added more system accounts to exclude_users: daemon, quagga,
+
+ -- dev-support <dev-support@cumulusnetworks.com>  Wed, 17 Jan 2018 12:55:08 -0800
+
+libnss-mapuser (1.0.0-cl3u1) RELEASED; urgency=low
+
+  * Initial version to do successful NSS lookups on any username,
+    and matching uid lookups back to the original name.
+    Used for RADIUS users, so they do not need to be in local files
+    (or LDAP, etc.)
+
+ -- dev-support <dev-support@cumulusnetworks.com>  Thu, 25 May 2017 20:59:49 -0700
